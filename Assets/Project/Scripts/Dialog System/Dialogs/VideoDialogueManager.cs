@@ -1,15 +1,18 @@
 ﻿#define USE_GLOBALVARIABLES
 using System.Collections;
 using System.Collections.Generic;
-using Articy.Teleperformance_Test;
-using Articy.Teleperformance_Test.Features;
-using Articy.Teleperformance_Test.GlobalVariables;
+using Articy.Project;
+using Articy.Project.Features;
+using Articy.Project.GlobalVariables;
 using Articy.Unity;
 using LitJson;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Analytics;
 
+/// <summary>
+/// Shows a video with dialogues, this dialogues are shown at specific times.
+/// </summary>
 public class VideoDialogueManager : DialogueManager {
 
     [SerializeField, Required, HideInPrefabAssets]

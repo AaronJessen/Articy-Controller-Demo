@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Articy.Teleperformance_Test;
+using Articy.Project;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
+/// <summary>
+/// Manager that shows a UI with a single text for a specified duration.
+/// </summary>
 public class BigDialogueManager : ArticySubManager {
     public override int Priority { get => 102; }
 #if UNITY_EDITOR

@@ -12,6 +12,7 @@ public abstract class ArticySubManager : MonoBehaviour {
     [SerializeField, Required/*, ValidateInput( "Validate_FlowPlayer", "ArticyFlowPlayer should be disabled by default." )*/]
     protected ArticyFlowPlayer _flowPlayer;
 
+    //TODO: Is this really necessary? In most cases there will be only one manager requesting control.
     //When requesting control, the submanager with the highest Priority value will get it.
     public abstract int Priority {
         get;
@@ -37,12 +38,30 @@ public abstract class ArticySubManager : MonoBehaviour {
         //_flowPlayer.enabled = true;
     }
 
+    /// <summary>
+    /// Yields control of the articy player. All ending login must go here.
+    /// </summary>
     public virtual void YieldPlayerController() {
         IsMain = false;
     }
 
+    /// <summary>
+    /// Receives the current node and decides if this manager should request
+    /// to control the articy player.
+    /// </summary>
+    /// <param name="flowObject">The current node in the graph</param>
     public abstract void Traverse( IFlowObject flowObject );
+    /// <summary>
+    /// Receives the following branches and decides if this manager should
+    /// request to contorl de articy player.
+    /// </summary>
+    /// <param name="branches"></param>
     public abstract void ViewNext( IList<Branch> branches );
+    /// <summary>
+    /// Called when this manager takes control of the flow player. All intialization login
+    /// should go here.
+    /// </summary>
+    /// <param name="player"></param>
     public abstract void ManageFlowPlayer( ArticyFlowPlayer player );
 
 #if UNITY_EDITOR

@@ -182,6 +182,8 @@ public class ArticyManager : ArticySubManager, IArticyFlowPlayerCallbacks {
             _subManagers[i].ViewNext( aBranches );
         }
 
+        //After all methods were called in the submanagers we decide
+        //which one takes control.
         var mainCandidates = (from s in _subManagers where s.AboutToRequestMain orderby s.Priority select s).ToList();
         var main = mainCandidates.Last();
 

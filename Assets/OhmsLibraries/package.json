@@ -1,0 +1,12 @@
+{
+    "name": "com.ohms.utilities",
+    "displayName": "Package Number 4",
+    "version": "0.2.0",
+    "unity": "2019.1",
+    "description": "Elementos que ocupo con frecuencia",
+    "keywords": ["ohms"],
+    "category": "utilities",
+    "dependencies": {
+    }
+}
+

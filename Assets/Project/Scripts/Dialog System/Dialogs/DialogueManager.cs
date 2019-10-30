@@ -1,14 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
-using Articy.Teleperformance_Test.GlobalVariables;
-using Articy.Teleperformance_Test;
+using Articy.Project;
+using Articy.Project.GlobalVariables;
 using Articy.Unity.Interfaces;
 using Articy.Unity;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Analytics;
 
+/// <summary>
+/// Shows a basic dialogue with a text. Optionally will also show a portrait
+/// image and play an audio.
+/// </summary>
 public class DialogueManager : ArticySubManager {
     [Required, SerializeField, HideInPrefabAssets]
     protected UIDialogueManager uiDialogueManager;

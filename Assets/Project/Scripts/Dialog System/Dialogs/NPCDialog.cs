@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
-using Articy.Teleperformance_Test;
+using Articy.Project;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using System;
 
+/// <summary>
+/// Initiates a dialogue from the selected NPC and continues the flow.
+/// </summary>
 public class NPCDialog : MonoBehaviour, IInteractable {
     [Required, SerializeField]
     protected ArticyCharacterReference characterReference;

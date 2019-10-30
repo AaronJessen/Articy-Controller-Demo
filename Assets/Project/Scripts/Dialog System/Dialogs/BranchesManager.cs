@@ -9,13 +9,16 @@ using Doozy.Engine.Events;
 using Doozy.Engine;
 using TMPro;
 using UnityEngine.UI;
-using Articy.Teleperformance_Test;
+using Articy.Project;
 using System.Linq;
 using System;
 using UnityEngine.Events;
 
+/// <summary>
+/// Activated when a decision must be made in the flow. Creates the necessary buttons
+/// and moves through the selected branch.
+/// </summary>
 public class BranchesManager : ArticySubManager {
-    //TODO: Branches Manager and UI objects should be separated into different classes.
     [SerializeField, Required, HideInPrefabAssets]
     private UIBranchesManager _uiManager;
 

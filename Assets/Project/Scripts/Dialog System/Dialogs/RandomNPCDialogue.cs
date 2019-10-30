@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Articy.Teleperformance_Test;
+using Articy.Project;
 using UnityEngine;
 
+/// <summary>
+/// Starts a dialogue from the selected NPC which is not part of the main flow
+/// so we go to a selected node in the graph and return to the original afterwards.
+/// </summary>
 public class RandomNPCDialogue : NPCDialog {
 
     private System.Action _interactionEnd;

@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Articy.Teleperformance_Test;
-using Articy.Teleperformance_Test.Features;
+using Articy.Project;
+using Articy.Project.Features;
 using Articy.Unity;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Analytics;
 
+/// <summary>
+/// Shows a video.
+/// </summary>
 public class VideoManager : ArticySubManager {
     public override int Priority => 300;
     private VideoDataFeature _lastData = null;
